@@ -1,5 +1,5 @@
 {
-  "name": "trickstudy/async-mysql",
+  "name": "db_drivers/async-mysql",
   "description": "Asynchronous & non-blocking MySQL driver for React.PHP",
   "license": "New BSD",
   "authors": [
@@ -11,6 +11,6 @@
     "reactphp/react": "0.4.*"
   },
   "autoload": {
-    "psr-0": {"trickstudy": "src/"}
+    "psr-0": {"db_drivers": "src/"}
   }
 }
