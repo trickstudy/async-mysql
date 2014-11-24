@@ -8,7 +8,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "reactphp/react": "0.4.*"
+    "react/react": "0.4.*"
   },
   "autoload": {
     "psr-0": {"db_drivers": "src/"}
