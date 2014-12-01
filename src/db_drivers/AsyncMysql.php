@@ -48,6 +48,9 @@ class AsyncMysql {
             if ($result === false) {  // Means the provided results indicate a query error
               $defered->reject(new \Exception($conn->error));  // Throw a PHP Excpetion with said error
             } else {  // Otherwise we have "good" results
+              if(stripos($query, "INSERT") === 0) {  // If it is an insert query
+                $result = $conn->last_id;  // set the result to the inserted ID instead of affected rows
+              }
               $defered->resolve($result);  // So resolve the deferred with the query results
             }
           } elseif ($err) {  // If we found errors in out polling...
